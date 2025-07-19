@@ -73,12 +73,6 @@ body {
     grid-gap: 10px;
     padding: 10px;
   }
-
-  .equal-sign {
-    grid-column: -2;
-    grid-row: 2 / span 4;
-    background-color: rgb(85, 85, 85);
-  }
   
   button {
     min-height: 50px;
@@ -87,17 +81,49 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background: rgb(31, 31, 31);
+    background: rgb(134, 134, 134);
     color: #fff;
   }
   
   button:hover {
     filter: brightness(110%);
   }
+  .clear:hover {
+    filter: brightness(90%);
+  }
   
   button:active {
     transform: scale(0.95);          
   }
   
+  button:focus {
+    outline: none;
+  }
+
+  .operator {
+    background: rgb(82, 78, 78);
+    color: white;
+    font-size: 30px;
+  }
+  
+  .clear {
+    background-color: rgb(236, 66, 66);
+    color: white;
+
+  }
+  
+   .equal-sign {
+    grid-column: -2;
+    grid-row: 2 / span 4;
+    background: rgb(18, 222, 62);
+   }
+
+   /* Media Queries */
+
+   @media screen and (max-width: 600px) {
+    .calculator {
+      width: 95%;
+    }
+  }
      
 
