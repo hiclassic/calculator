@@ -7,7 +7,13 @@ function sendNumberValue(number){
     const displayValue = calculatorDisplay.textContent;
       calculatorDisplay.textContent === "0"
         ? number
-        : calculatorDisplay.textContent + number);
+        : calculatorDisplay.textContent + number;
+}
+//Adding decimal function 
+function addDcimal(){
+    if(!calculatorDisplay.textContent.includes('.')){
+        calculatorDisplay.textContent += '.';
+    }
 }
 
 //Adding event listeners for numbers, operators and decimal buttons
@@ -17,6 +23,6 @@ inputButtons.forEach((inputBtn) => {
     }else if(inputBtn.classList.contains('operator')){
         inputBtn.addEventListener('click', () => sendNumberValue(inputBtn.value));
     }else if(inputBtn.classList.contains('decimal')){
-        inputBtn.addEventListener('click', () => sendNumberValue());
+        inputBtn.addEventListener('click', () => addDcimal());
     }
 });
